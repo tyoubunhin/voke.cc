@@ -1,4 +1,16 @@
 (function($){
+//header
+var oconnorBody = $("body"),
+defaultScroll = 0;
+jQuery(window).scroll(function() {
+  if (jQuery(this).scrollTop() < defaultScroll && jQuery(this).scrollTop() > 50) {
+    $("#header").addClass('affixed');
+  } else {
+    $("#header").removeClass('affixed');
+  }
+  defaultScroll = jQuery(this).scrollTop();
+})
+
 
   // Caption
   $('.article-entry').each(function(i){
