@@ -117,6 +117,14 @@ body {
   font: 400 1em/1.7 "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   -webkit-text-size-adjust: 100%;
 }
+a {
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  -ms-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+  color: #515865;
+  text-decoration: inherit;
+}
 .outer {
   max-width: 800px;
   margin: 0 auto;
@@ -218,7 +226,7 @@ a.article-title,
 .article-entry ol,
 .article-entry dl {
   margin: 0 20px;
-  line-height: 1.4em;
+  line-height: 1.9em;
 }
 .article-entry ul ul,
 .article-entry ol ul,
@@ -240,10 +248,22 @@ a.article-title,
   font-size: 14px;
   position: relative;
   border-bottom: 1px solid #ddd;
+  top: 0;
+  z-index: 100;
+  left: 0;
+  right: 0;
 }
 #header.mobile-on #main-nav,
 #header.mobile-on #sub-nav {
   display: block;
+}
+#header.dark {
+  display: none;
+}
+#header.affixed {
+  display: inline;
+  position: fixed;
+  background: rgba(255,255,255,0.97);
 }
 #header-outer {
   height: 100%;
@@ -400,7 +420,7 @@ a.article-title,
   margin-left: 5px;
 }
 .article-category:before {
-  content: "\2022";
+  content: "·";
 }
 .article-category span {
   margin-left: 8px;
@@ -411,7 +431,7 @@ a.article-title,
   color: #939393;
 }
 .article-comment-link-wrap:before {
-  content: "\2022";
+  content: "·";
 }
 .article-comment-link {
   margin-left: 8px;
@@ -435,7 +455,7 @@ a.article-title,
 }
 .article-entry p,
 .article-entry table {
-  line-height: 1.4em;
+  line-height: 1.9em;
   margin: 1em 0;
 }
 .article-entry h1,
@@ -451,8 +471,8 @@ a.article-title,
 .article-entry ul,
 .article-entry ol,
 .article-entry dl {
-  margin-top: 1.4em;
-  margin-bottom: 1.4em;
+  margin-top: 1.9em;
+  margin-bottom: 1.9em;
 }
 .article-entry img,
 .article-entry video {
@@ -481,12 +501,12 @@ a.article-title,
 .article-entry blockquote {
   font-family: 400 0.588235294117647em "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-size: 1.4em;
-  margin: 1.4em 20px;
+  margin: 1.9em 20px;
   text-align: center;
 }
 .article-entry blockquote footer {
   font-size: 16px;
-  margin: 1.4em 0;
+  margin: 1.9em 0;
   font-family: font-sans;
 }
 .article-entry blockquote footer cite:before {
@@ -618,7 +638,7 @@ a.article-title,
 }
 .article-nav-title {
   font-size: 0.85em;
-  line-height: 1.4em;
+  line-height: 1.9em;
   margin-top: 0.5em;
 }
 .article-gallery {
@@ -655,8 +675,8 @@ a.article-title,
   margin-left: 400px;
   padding-left: 20px;
   overflow-y: auto;
-  line-height: 1.4em;
-  max-height: 40.32em;
+  line-height: 1.9em;
+  max-height: 54.72em;
 }
 .article-toc h3 {
   font-weight: bold;
@@ -768,15 +788,27 @@ a.article-title,
   color: #ddd;
 }
 #footer {
-  padding: 50px 0;
-  text-align: center;
+  clear: both;
+  font-size: 12px;
+  background-color: #283339;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: #a2a2a2;
+  padding: 40px 0;
+  line-height: 17pt;
 }
 #footer a {
   font-weight: 600;
 }
 #footer-info {
-  line-height: 1.4em;
+  line-height: 1.9em;
   font-size: 0.85em;
+  float: right;
+}
+#footer-note {
+  line-height: 1.9em;
+  font-size: 0.85em;
+  float: left;
 }
 .article-entry pre,
 .article-entry .highlight {
@@ -786,7 +818,7 @@ a.article-title,
   padding: 15px 0;
   overflow: auto;
   color: #fff;
-  line-height: 22.4px;
+  line-height: 30.4px;
 }
 .article-entry .highlight .gutter pre,
 .article-entry .gist .gist-file .gist-data .line-numbers {
@@ -846,7 +878,7 @@ a.article-title,
   text-align: right;
 }
 .article-entry .highlight .line {
-  height: 22.4px;
+  height: 30.4px;
 }
 .article-entry .gist {
   margin: 0;
