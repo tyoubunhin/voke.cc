@@ -93,7 +93,7 @@ input,
 button {
   margin: 0;
   padding: 0;
-  font: 16px 'PT Serif', 'STZhongsong', '华文中宋', 'Microsoft Yahei', serif;
+  font: 16px 400 0.588235294117647em "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 input::-moz-focus-inner,
 button::-moz-focus-inner {
@@ -114,7 +114,7 @@ body,
 }
 body {
   background: #fff;
-  font: 16px 'PT Serif', 'STZhongsong', '华文中宋', 'Microsoft Yahei', serif;
+  font: 400 1em/1.7 "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 .outer {
@@ -148,29 +148,8 @@ body {
 #container {
   position: relative;
 }
-.logo {
-  width: 94px;
-  height: 57px;
-  background-image: url("images/logo.png");
-  -webkit-background-size: 74px 28px;
-  -moz-background-size: 74px 28px;
-  background-size: 74px 28px;
-  background-position: left center;
-  background-repeat: no-repeat;
-}
-.logo-text {
-  width: auto;
-  color: #000;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 57px;
-  margin-right: 25px;
-  text-decoration: none;
-  background-image: none;
-}
 .article-meta a,
 a.article-title,
-.article-entry a,
 .article-more-link a,
 #comments a,
 .archive-year-wrap a,
@@ -185,25 +164,6 @@ a.article-title,
   color: #111;
   text-decoration: none;
   border-bottom: 1px dotted transparent;
-}
-.article-meta a:hover,
-a.article-title:hover,
-.article-entry a:hover,
-.article-more-link a:hover,
-#comments a:hover,
-.archive-year-wrap a:hover,
-.archive-category-wrap a:hover,
-.archive-tag-wrap a:hover,
-.archive-article-title:hover,
-#page-nav a:hover,
-#footer a:hover,
-.article-entry .gist .gist-file .gist-meta a:hover,
-.layout-wrap-inner .category-list a:hover,
-.tag-cloud a:hover {
-  border-bottom-color: #000;
-}
-.article-entry a {
-  border-bottom: 1px dotted #000;
 }
 .article-entry h1 {
   font-size: 2em;
@@ -311,7 +271,7 @@ a.article-title:hover,
   padding: 20px 15px;
 }
 .main-nav-link {
-  font-weight: 600;
+  font-weight: 500;
 }
 @media screen and (max-width: 839px) {
   .main-nav-link {
@@ -333,15 +293,22 @@ a.article-title:hover,
     display: block;
   }
 }
-#logo {
+#site-title {
   float: left;
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  display: block;
+  font-weight: 600;
+  padding: 20px 20px 20px 0;
 }
 @media screen and (max-width: 839px) {
-  #logo {
+  #site-title {
     float: none;
-    margin: 0 auto;
-    display: block;
-    background-position: center;
+    text-align: center;
   }
 }
 #sub-nav {
@@ -399,11 +366,16 @@ a.article-title:hover,
 }
 .article {
   margin: 50px 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgba(242,242,242,0.34);
 }
 .article-inner {
   margin-bottom: 15px;
   overflow: hidden;
+}
+.article-meta {
+  color: #ccc;
+  margin-bottom: 10px;
+  font-size: 12px;
 }
 .article-meta:before,
 .article-meta:after {
@@ -414,23 +386,23 @@ a.article-title:hover,
   clear: both;
 }
 .article-meta a {
-  color: #939393;
+  color: #ccc;
+  font-weight: normal;
+  display: inline-block;
+  position: relative;
+  word-wrap: break-word;
 }
 .article-date {
   float: left;
 }
 .article-category {
   float: left;
-  margin-left: 8px;
-  color: #939393;
+  margin-left: 5px;
 }
 .article-category:before {
   content: "\2022";
 }
 .article-category span {
-  margin-left: 8px;
-}
-.article-category-link {
   margin-left: 8px;
 }
 .article-comment-link-wrap {
@@ -444,11 +416,8 @@ a.article-title:hover,
 .article-comment-link {
   margin-left: 8px;
 }
-.article-header {
-  margin-bottom: 10px;
-}
 .article-title {
-  font-size: 2em;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1em;
 }
@@ -467,7 +436,7 @@ a.article-title:hover,
 .article-entry p,
 .article-entry table {
   line-height: 1.4em;
-  margin: 1.4em 0;
+  margin: 1em 0;
 }
 .article-entry h1,
 .article-entry h2,
@@ -510,7 +479,7 @@ a.article-title:hover,
   padding: 10px 0;
 }
 .article-entry blockquote {
-  font-family: 'PT Serif', 'STZhongsong', '华文中宋', 'Microsoft Yahei', serif;
+  font-family: 400 0.588235294117647em "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-size: 1.4em;
   margin: 1.4em 20px;
   text-align: center;
@@ -562,14 +531,21 @@ a.article-title:hover,
   margin-top: 0;
 }
 .article-more-link a {
-  color: #939393;
-  border-bottom-color: #939393;
+  background-color: #f3a500;
+  color: #fff;
+  padding: 3px 8px;
+  font-size: 13px;
+  line-height: 1;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 .article-footer {
-  font-size: 0.85em;
-  padding: 1.4em 0;
-  line-height: 1.4em;
-  margin: 0;
+  font-size: 12px;
+  color: #ccc;
+  font-weight: normal;
+  display: inline-block;
+  position: relative;
+  word-wrap: break-word;
 }
 .article-footer:before,
 .article-footer:after {
@@ -589,9 +565,6 @@ a.article-title:hover,
 .article-tag-list-item {
   float: left;
   margin-right: 10px;
-}
-.article-tag-list-link:before {
-  content: "#";
 }
 #article-nav {
   position: relative;
@@ -822,7 +795,7 @@ a.article-title:hover,
 }
 .article-entry pre,
 .article-entry code {
-  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace, '华文中宋';
+  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
 }
 .article-entry code {
   background: #f2f2f2;
@@ -881,7 +854,7 @@ a.article-title:hover,
 }
 .article-entry .gist .gist-file {
   border: none;
-  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace, '华文中宋';
+  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
   margin: 0;
 }
 .article-entry .gist .gist-file .gist-data {
@@ -1086,12 +1059,12 @@ pre .php .xml {
   padding: 0 !important;
   -webkit-border-radius: 0;
   border-radius: 0;
-  font-family: 'PT Serif', 'STZhongsong', '华文中宋', 'Microsoft Yahei', serif;
+  font-family: 400 0.588235294117647em "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 .fancybox-skin .fancybox-title .child {
   background: none;
   font-weight: 400;
   font-size: 16px;
-  font-family: 'PT Serif', 'STZhongsong', '华文中宋', 'Microsoft Yahei', serif;
+  font-family: 400 0.588235294117647em "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   text-shadow: 1px 3px 3px rgba(0,0,0,0.5);
 }
