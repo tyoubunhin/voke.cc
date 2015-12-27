@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>入手NAS小记（Iomega home media 安装教程） - tyoubunhin&#39;s Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="家中闲余一枚3.5硬盘，一直想入手一个价位适中的NAS做下载机和存储设备，某宝物色很久，下单，顺丰神速，大广东到大连仅22小时。由于家里没有台式机所以直接发货到公司按照掌柜提供的说明准备好了带读写灯的U盘、刷机用的文件以及必不可少的螺丝刀。这里将安装与使用的全部过程记录如下，方便自己或他人日后遇到问题重新安装使用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="入手NAS小记（Iomega home media 安装教程）">
+<meta property="og:url" content="http://tyoubunhin.com/posts/nas.html">
+<meta property="og:site_name" content="tyoubunhin's Notes">
+<meta property="og:description" content="家中闲余一枚3.5硬盘，一直想入手一个价位适中的NAS做下载机和存储设备，某宝物色很久，下单，顺丰神速，大广东到大连仅22小时。由于家里没有台式机所以直接发货到公司按照掌柜提供的说明准备好了带读写灯的U盘、刷机用的文件以及必不可少的螺丝刀。这里将安装与使用的全部过程记录如下，方便自己或他人日后遇到问题重新安装使用。">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/bb474ec3jw1ezejy5ewesj20lo070755.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/bb474ec3jw1ezejxpi5mbj20jg0ejn0s.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/bb474ec3jw1ezek6qw3boj20g607zjsb.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/bb474ec3jw1ezek7zg0jxj20x70jxgn2.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/bb474ec3jw1ezek85tlzlj20rs0c9acq.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/bb474ec3jw1ezek8spaogj20oy0fv0ui.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/bb474ec3jw1ezek92blkkj20lp0gignj.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/bb474ec3jw1ezekb7eehgj20ve0e9acw.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/bb474ec3jw1ezekbvx3buj211q0iudk5.jpg">
+<meta property="og:updated_time" content="2015-12-27T14:02:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="入手NAS小记（Iomega home media 安装教程）">
+<meta name="twitter:description" content="家中闲余一枚3.5硬盘，一直想入手一个价位适中的NAS做下载机和存储设备，某宝物色很久，下单，顺丰神速，大广东到大连仅22小时。由于家里没有台式机所以直接发货到公司按照掌柜提供的说明准备好了带读写灯的U盘、刷机用的文件以及必不可少的螺丝刀。这里将安装与使用的全部过程记录如下，方便自己或他人日后遇到问题重新安装使用。">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-60419601-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="site-title" href="/">tyoubunhin's Notes</a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/categories/日常/">日 常</a>
+        
+          <a class="main-nav-link" href="/categories/读书/">读 书</a>
+        
+          <a class="main-nav-link" href="/categories/折腾/">折 腾</a>
+        
+          <a class="main-nav-link" href="/archives">归 档</a>
+        
+      </nav>
+<!--
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://tyoubunhin.com"></form>
+        </div>
+      </nav>
+-->
+    </div>
+  </div>
+</header>
+    <section id="main" class="outer"><article id="post-nas" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+<!--
+    <div class="article-meta">
+      <a href="/posts/nas.html" class="article-date">
+  <time datetime="2014-11-02T13:02:26.000Z" itemprop="datePublished">2014-11-02</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/折腾/">折腾</a>
+  </div>
+
+      
+    </div>
+-->
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      入手NAS小记（Iomega home media 安装教程）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://ww3.sinaimg.cn/large/bb474ec3jw1ezejy5ewesj20lo070755.jpg" alt=""><br>家中闲余一枚3.5硬盘，一直想入手一个价位适中的NAS做下载机和存储设备，某宝物色很久，下单，顺丰神速，大广东到大连仅22小时。由于家里没有台式机所以直接发货到公司按照掌柜提供的说明准备好了带读写灯的U盘、刷机用的文件以及必不可少的螺丝刀。这里将安装与使用的全部过程记录如下，方便自己或他人日后遇到问题重新安装使用。<br><a id="more"></a></p>
+<h3 id="设备参数">设备参数</h3><ul>
+<li>Iomega home media</li>
+<li>CPU:Oxford Semiconductor NAS 7820 Dual core@600MHz</li>
+<li>RAM:256 MB 2x Samsung K4T1G164QE-HCF7</li>
+<li>Flash ROM:None</li>
+<li>NIC:Realtek RTL8211D Gigabit Ethernet Transceiver</li>
+<li>USB:2x USB 2.0 port</li>
+<li>Other:External power adapter (12V 2A)</li>
+</ul>
+<h3 id="装入硬盘">装入硬盘</h3><p><img src="http://ww4.sinaimg.cn/large/bb474ec3jw1ezejxpi5mbj20jg0ejn0s.jpg" alt=""></p>
+<h3 id="硬盘操作">硬盘操作</h3><p>解压掌柜提供的文件，使用硬盘分区软件EaseUS Partition Master进行硬盘和U盘的分区操作，之前只用过PQ、PM，打开这个软件还有点小清新的感脚。按照教程提示首先将硬盘里面的所有分区全部删除，不建任何分区。打开WINHEX的硬盘克隆标签页（Ctrl+D）将压缩包内带的Iomega-HMNHD-CE-1st-32M.img写入硬盘中， 由于当时没截图，直接引用一张教程图片。<br><img src="http://ww3.sinaimg.cn/large/bb474ec3jw1ezek6qw3boj20g607zjsb.jpg" alt=""></p>
+<h3 id="U盘操作">U盘操作</h3><p>硬盘操作好了，将U盘格式化成FAT32格式，主分区模式。将emctools文件夹和bootrom.txt拷入U盘根目录。<br>PS：这期间出现了一个小插曲，由于自己的U盘很久之前做过PE引导，启动模式和正常的不一样，误以为是NAS的问题，换了个U盘搞定。</p>
+<h3 id="开始升级">开始升级</h3><p>1.将硬盘插入iomega home media。【一定要上好硬盘固定螺丝】<br>2.将U盘插到iomega home media USB接口，我自己用的是靠近网口的那个。<br>3.插上电源，系统开始自动安装系统，我将USB闪灯时间及其含义写到下面供大家参考。<br>20秒左右 U盘常亮 #NAS识别到 U盘<br>30秒左右 U盘开始闪烁 #NAS开始解压U盘的imager_3.1.14.995.tgz文件到U盘<br>3分20秒左右 NAS 磁盘灯闪烁 #NAS开始将U盘文件写入硬盘<br>3分40秒左右 U盘常亮 #文件写入结束<br>4分20秒左右 U盘灯熄灭 #系统执行关机命令<br>U盘灯熄灭后等待2~3分钟，若是NAS还是没关机，就直接拔掉NAS电源，关机处理。<br>4.拔掉U盘，iomega home media 连接1条网线到路路由器。然后插上电源开机。<br>5.等待大约2分钟，打开浏览器进入路由器的DHCP列表，找到STORAGE的IP地址。<br>6.进入设置页面→→系统→→软件更新→→添加软件→→浏览hmnhd-3.2.3.15290.tgz →→上载 按照提示等待完成更新。<br>7.等待上传完成，出现“应用” 按钮，点击应用。<br>8.系统安装完毕。<br><img src="http://ww3.sinaimg.cn/large/bb474ec3jw1ezek7zg0jxj20x70jxgn2.jpg" alt=""><br><img src="http://ww2.sinaimg.cn/large/bb474ec3jw1ezek85tlzlj20rs0c9acq.jpg" alt=""><br>全部功能再来一张。<br>在网络设置中将IP固定分配，方便日后管理。NAS安装基本上到这里就已经结束了。当然仅仅是NAS的基本功能是不够用的，掌柜的教程中还提到了如何安装Aria2来实现迅雷离线,BTPT,网盘的下载。</p>
+<h3 id="Aria2安装">Aria2安装</h3><p>准备软件：WinSCP、SecureCRSecureFXPortable（掌柜提供的压缩包中附带的是64位的软件32位系统须自行下载或使用putty）、aria2安装文件<br>1、升级最新OS，到<a href="http://NAS的IP地址/diagnostics.html打开SSH。" target="_blank" rel="external">http://NAS的IP地址/diagnostics.html打开SSH。</a><br><img src="http://ww2.sinaimg.cn/large/bb474ec3jw1ezek8spaogj20oy0fv0ui.jpg" alt=""><br>2、进入管理页面，在共享中新建一个共享，名为share，在share文件夹中新建Download文件夹，在Download文件夹中新建aria2文件夹，把附件中的aria2文件夹中的三个文件，aria2.conf，aria2jobs.txt，aria2.log拷贝到NAS的aria2文件夹中。把附件中的aria2_1.16.5-1_arm.ipk拷贝到NAS的Download文件夹中。<br>aria2.conf文件里默认的下载目录是/mnt/pools/A/A0/share/Download，根据自己的需要更改下载目录，在WinSCP里面双击aria2.conf文件编辑字段为dir=来更改，同时确保在Web界面里已经新建了你要更改的下载文件夹。注意，文件夹不要使用中文名，以保证兼容性。要确定自己的路径，请在WinSCP中浏览到/mnt/pools目录下，查看自己的路径。<br>需要启动rpc密码的用户，去掉aria2.conf文件中#rpc-user=rpc_user和#rpc-passwd=rpc_passwd之前的#号，并自行更改=后面的字段。<br><img src="http://ww3.sinaimg.cn/large/bb474ec3jw1ezek92blkkj20lp0gignj.jpg" alt=""><br>3、打开SecureCRSecureFXPortable文件夹中的SecureCRTPortable.exe，点击”文件”，”快速连接”。<br>4、在主机名中填入你的NAS的IP地址，用户名填root。<br>5、点击密码，点击属性，勾选存储密码，填入密码soho。点击确定。然后点击连接。出现#号即为连接成功。<br>6、在窗口中输入以下命令，一次一条，也就是一行。不要搞错。有些命令需要下载文件，务必等待下载完成，也就是再次出现#号为止，才能输入下一条命令。</p>
+<p><strong>由于网站在国外，长时间无法下载完成的用户，按Ctrl+C取消安装，重新输入该命令重试。判断NAS能否访问该网站，请在浏览器中测试<a href="http://ipkg.nslu2-linux.org/feeds/optware/cs08q1armel/cross/stable是否能访问，不能访问的话，请自行在路由中设置翻墙，关于如何翻墙，请自行解决。" target="_blank" rel="external">http://ipkg.nslu2-linux.org/feeds/optware/cs08q1armel/cross/stable是否能访问，不能访问的话，请自行在路由中设置翻墙，关于如何翻墙，请自行解决。</a></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export feed=http://ipkg.nslu2-linux.org/feeds/optware/cs08q1armel/cross/stable&#10;export ipk_name=`wget -qO- $feed/Packages | awk &#39;/^Filename: ipkg-opt/ &#123;print $2&#125;&#39;`&#10;wget $feed/$ipk_name&#10;tar -xOvzf $ipk_name ./data.tar.gz | tar -C / -xzvf -&#10;mkdir -p /opt/etc/ipkg&#10;echo &#34;src cross $feed&#34; &#62;&#62; /opt/etc/ipkg/feeds.conf&#10;export PATH=/opt/bin:$PATH&#10;ipkg update&#10;cd /mnt/pools/A/A0/share/Download&#10;ipkg install aria2_1.16.5-1_arm.ipk</span><br></pre></td></tr></table></figure>
+<p>7、全部完成后，打开附件中的WinSCP文件夹中的WinSCP.exe，点击新建，在主机名中填入NAS的IP地址，在用户名中填入root，在密码中填入soho，点击保存。在弹出的会话另存为对话框中，勾选保存密码，点击确定。关闭对话框后，点击登录。要是询问密码的话，就填入soho。<br>8、登陆后，进入etc目录，把附件中的etc文件夹下的profile和rc.local覆盖到NAS的etc目录中。完成后，aria2即可随机启动。<br>9、回到SecureCRTPortable.exe的窗口，输入reboot，回车，等待重启完成，即可安装完成aria2。</p>
+<p><strong>这里强调一下，BT/PT的监听端口为51414，记得在路由中做好端口转发。</strong></p>
+<p><img src="http://ww3.sinaimg.cn/large/bb474ec3jw1ezekb7eehgj20ve0e9acw.jpg" alt=""></p>
+<h3 id="Aria2使用">Aria2使用</h3><p>在Chrome商店中查找MBL&amp;MC迅雷离线/QQ旋风/百度网盘/360云盘等aria2增强脚本，直接搜索aria2即可，在扩展程序中，安装。在Chrome中打开aria2的Web管理界面，可以自己搭设，也可以访问我已搭好的地址：<a href="http://tyoubunhin.com/aria2/。打开后点击页面右上角的扳手设置图标进行设置，在程序路径内填入http://NAS的IP地址:6800/jsonrpc。外网访问的话，填http://DDNS网址:6800/jsonrpc。">http://tyoubunhin.com/aria2/。打开后点击页面右上角的扳手设置图标进行设置，在程序路径内填入http://NAS的IP地址:6800/jsonrpc。外网访问的话，填http://DDNS网址:6800/jsonrpc。</a><br><img src="http://ww3.sinaimg.cn/large/bb474ec3jw1ezekbvx3buj211q0iudk5.jpg" alt=""></p>
+<p><strong>迅雷离线下载（须迅雷会员）</strong><br>在Chrome中进入<a href="http://lixian.vip.xunlei.com，登陆迅雷账号后，点击页面右上角的齿轮设置图标进行设置，在Path内填入http://NAS的IP地址:6800/jsonrpc。外网访问的话，填http://DDNS网址:6800/jsonrpc，勾选部分只勾选YAAW。" target="_blank" rel="external">http://lixian.vip.xunlei.com，登陆迅雷账号后，点击页面右上角的齿轮设置图标进行设置，在Path内填入http://NAS的IP地址:6800/jsonrpc。外网访问的话，填http://DDNS网址:6800/jsonrpc，勾选部分只勾选YAAW。</a></p>
+<p><strong>百度等网盘下载</strong><br>下载链接边上会多一个导出，鼠标移动到导出按钮，点击设置，和迅雷一样的设置方法。</p>
+
+      
+    </div>
+    
+      <div class="article-toc">
+        <h3>目录</h3>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#设备参数"><span class="toc-number">1.</span> <span class="toc-text">设备参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#装入硬盘"><span class="toc-number">2.</span> <span class="toc-text">装入硬盘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#硬盘操作"><span class="toc-number">3.</span> <span class="toc-text">硬盘操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#U盘操作"><span class="toc-number">4.</span> <span class="toc-text">U盘操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开始升级"><span class="toc-number">5.</span> <span class="toc-text">开始升级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Aria2安装"><span class="toc-number">6.</span> <span class="toc-text">Aria2安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Aria2使用"><span class="toc-number">7.</span> <span class="toc-text">Aria2使用</span></a></li></ol>
+      </div>
+    
+<!--
+    
+      <footer class="article-footer">
+        
+      </footer>
+    
+-->
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/posts/openmediavault.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-title"><span>&lt;</span>&nbsp;
+        
+          VM上短暂测试OpenMediaVault
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+<div id="disqus_thread"></div>
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//tyoubunhin.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</section>
+</section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; tyoubunhin.com<br />辽ICP备15000128-2
+    </div>
+    <div id="footer-note" class="inner">
+    NEVER SETTLE<br />用时间换取才华
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>
