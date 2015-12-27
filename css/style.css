@@ -126,7 +126,7 @@ a {
   text-decoration: inherit;
 }
 .outer {
-  max-width: 800px;
+  max-width: 780px;
   margin: 0 auto;
 }
 .outer:before,
