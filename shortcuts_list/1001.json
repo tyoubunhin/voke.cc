@@ -1,10 +1,10 @@
 {
 "id":"1001",
 "name":"定位打卡",
-"version":"2",
+"version":"1",
 "update-title":"",
-"update-date":"新版已更新！稍后会自动访问网页获取~获取后替换即可~",
-"update-url":"http://baidu.com",
+"update-date":"新版已更新！稍后会自动访问网页获取，获取后替换即可",
+"update-url":"",
 "location-1":"prefs:root=Privacy&path=LOCATION",
 "location-2":"dingtalk://dingtalkclient/page/link?url=https://attend.dingtalk.com/attend/index.html"
 }
